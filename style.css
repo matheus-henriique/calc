@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.calculator, .percentage-calculator {
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Ajusta a largura para 80% da largura do viewport */
+    max-width: 350px; /* Define uma largura máxima para o layout */
+    margin: 20px;
+}
+
+#display, input[type="number"] {
+    width: calc(100% - 20px); /* Define a largura para 100% do container */
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+button, button, input[type="number"] {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #eee;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+button:last-child {
+    grid-column: span 2; /* Ajusta o botão '.' para ocupar duas colunas */
+}
+
+p {
+    margin-top: 15px;
+}
+
+/* Media query para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+    .calculator, .percentage-calculator {
+        width: 90%; /* Ajusta a largura para 90% do viewport em telas menores */
+        max-width: none; /* Remove a largura máxima em telas menores */
+    }
+}
